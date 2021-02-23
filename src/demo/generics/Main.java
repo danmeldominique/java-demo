@@ -30,7 +30,16 @@ public class Main {
 
         crows.matchResult(demons, 56, 77);
         chicagoCubs.matchResult(dodgers, 34, 12);
-        manUnited.matchResult(arsenal, 4, 2);
-        
+        manUnited.matchResult(arsenal, 4, 4);
+
+        System.out.println("Rankings");
+        System.out.println(crows.compareTo(demons));
+        System.out.println(manUnited.compareTo(arsenal));
+
+
+        League<Team<FootballPlayer>> footballLeague = new League<>("AFL");
+        footballLeague.addTeam(crows);
+        footballLeague.addTeam(demons);
+        footballLeague.showLeagueTable();
     }
 }
